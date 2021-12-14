@@ -54,7 +54,7 @@ Description
       subparameter
    -  'antpos' = For VLA datasets, automatic lookup of antenna
       position corrections if *antenna=''*
-   -  'jyperk' = Jy/K factor via Jy/K DB Web API
+   -  'jyperk' = Jy/K factor via Jy/K DB Web API (ALMA only)
       
    For the VLA, *caltype='gc'* will do auto-lookup the gain curve information.
    For VLBI, gain curve information will be taken from MS.GAIN_CURVE when present
@@ -145,11 +145,11 @@ Description
       according to the observing frequencies. These caltypes are currently
       only supported for VLA (including pre-upgrade VLA) and VLBI processing.
       (Appropriate factors for ALMA are TBD.)
-   -  'jyperk'  For the singlie dish in ALMA, the task without 'infile'
-      queries Jy/K DB (https://asa.alma.cl/science/jy-kelvins) via
-      internet to obtain facrors and generate a caltable. Or the
-      task with 'infile' load a factor file on the local storage to
-      generate the caltable.
+   -  'jyperk'  For ALMA Total Power (Single Dish), the task without
+      'infile' queries Jy/K DB (https://asa.alma.cl/science/jy-kelvins)
+      via internet to obtain facrors and generate a caltable. Or the
+      task with 'infile' load a file with factors on the local storage
+      to generate a caltable.
 
 
 .. _Examples:
